@@ -1,3 +1,7 @@
+<?php
+use App\Http\Controllers\ProductController;
+$total = ProductController::cartItem();
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +19,7 @@
     </ul>
     <ul class="navbar-nav ">
         <li class="nav-item ml-lg-8">
-            <a class="nav-link" href="#">Carts</a>
+            <a class="nav-link" href="#">Carts({{$total}})</a>
         </li>
       </ul>
   </div>
