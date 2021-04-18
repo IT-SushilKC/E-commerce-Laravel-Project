@@ -1,20 +1,27 @@
 @extends('master')
 @section('content')
-<div class="custom-project">
-    <div class="class-sm-10">
+<div class="custom-product">
+    <div class="col-sm-10">
         <div class="trending-wrapper">
-            <h4>Reasults of Products</h4>
+            <h4>Results For Products</h4>
             @foreach($products as $item)
-            <div class="tranding-item">
-                <a href="detail/{{$item->id}}">
-                    <img class="tranding-img" src="{{$item['gallery']}}" alt="Los Angeles">
+            <div class="row searched-item cart-list-divider">
+                <div class="col-sm-3">
+                   <a href="detail/{{$item->id}}">
+                        <img class="tranding-img" src="{{$item->gallery}}" >
+                    </a>
+                </div>
+                <div class="col-sm-3">
                     <div class="">
-                        <h5>{{$item->name}}</h5> 
-                        <h5>{{$item->description}}</h5>           
+                        <h5>{{$item->name}}</h5>
+                        <p>{{$item->description}}</p>
                     </div>
-                </a>
-            </div>
+                   </div>
+                   <div class="col-sm-3">
+                        <button class="btn btn-primary">Remove From Cart</button>
+                   </div>
+                </div>
             @endforeach
-        </div>
-    </div>
-</div>
+        </div>    
+    </div></div>
+@endsection

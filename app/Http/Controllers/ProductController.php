@@ -36,12 +36,12 @@ class ProductController extends Controller
         return Cart::where("user_id",$userId)->count();
     }
     function cartList(){
-        $userId = Session::get('user')['id'];
-        $products = DB::table('cart')
-        ->join('products','cart.product_id','=','product.id')
-        ->where('cart.user_id',$userId)
-        ->select('products.*')
-        ->get();
-        return view('cartList',['products'=>$products]);
-    }
+            $userId = Session::get('user')['id'];
+            $products = DB::table('cart')
+            ->join('products','cart.product_id','=','product_id')
+            ->where('cart.user_id', $userId)
+            ->select('products.*')
+            ->get();
+            return view('cartList',['products'=>$products]);
+        }
 }
