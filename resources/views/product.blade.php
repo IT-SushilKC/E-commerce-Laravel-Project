@@ -42,7 +42,7 @@
   @foreach($products as $item)
     <div class="tranding-item">
     <a href="detail/{{$item['id']}}">
-      <img class="tranding-img" src="{{$item['gallery']}}" alt="Los Angeles">
+      <img class="tranding-img" src="{{$item['gallery']}}">
       <div class="">
         <h5>{{$item['name']}}</h5>
         

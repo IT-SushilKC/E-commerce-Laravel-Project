@@ -15,10 +15,10 @@ $total = ProductController::cartItem();
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">orders</a>
+        <a class="nav-link" href="/ordernow">orders</a>
       </li>
     </ul>
     <ul class="navbar-nav ">
@@ -32,10 +32,10 @@ $total = ProductController::cartItem();
           <a class="dropdown-item" href="/logout">Logout</a>
           
        </div>
-  </li>
-  @else 
-  <a class="nav-link" href="/login">Login</a>
-  @endif
+      </li>
+      @else 
+      <a class="nav-link" href="/login">Login</a>
+      @endif
       </ul>
     
   </div>

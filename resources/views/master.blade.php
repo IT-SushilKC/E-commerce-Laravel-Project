@@ -20,8 +20,6 @@
             margin-left: auto;
             margin-right: auto;
             }
-            
-            
             .custom-product{
                 height: 600px;
               
